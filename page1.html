@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Recycle Marketplace</title>
+<style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0;
+    background: #fff;
+    color: #000;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  header .logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #2ecc71;
+    cursor: pointer;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    cursor: pointer;
+  }
+  nav ul li:hover {
+    text-decoration: underline;
+  }
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  .auth-buttons button {
+    border: none;
+    padding: 8px 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  .auth-buttons .sign-in {
+    background: transparent;
+    color: #2ecc71;
+  }
+  .auth-buttons .sign-up {
+    background: #2ecc71;
+    color: white;
+  }
+
+  /* Main Image Slider (single image for demo) */
+  .main-slider {
+    margin: 20px auto;
+    max-width: 1000px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .main-slider img {
+    width: 100%;
+    display: block;
+  }
+
+  /* Icon grid */
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    justify-items: center;
+  }
+  .icon-circle {
+    background: #2ecc71;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 10px #2ecc71);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .icon-circle:hover {
+    transform: scale(1.1);
+  }
+  .icon-circle img {
+    width: 50px;
+    height: 50px;
+  }
+  .icon-label {
+    margin-top: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  /* News section */
+  .news-section {
+    max-width: 1000px;
+    margin: 50px auto 70px;
+    background: #2ecc71;
+    color: white;
+    display: flex;
+    gap: 20px;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+  }
+  .news-text {
+    flex: 1;
+  }
+  .news-text h2 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+  .news-text p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .news-text button {
+    background: white;
+    color: #2ecc71;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+  }
+  .news-text button:hover {
+    background: #27ae60;
+    color: white;
+  }
+  .news-image {
+    flex: 1;
+  }
+  .news-image img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .news-section {
+      flex-direction: column;
+    }
+    .news-image {
+      order: -1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">ReGenMarket</div>
+  <nav>
+    <ul>
+      <li>HOME</li>
+      <li>RECYCLE</li>
+      <li>LOCATION</li>
+      <li>ACCOUNT</li>
+    </ul>
+  </nav>
+  <div class="auth-buttons">
+    <button class="sign-in">Sign in</button>
+    <button class="btn sign-up" type="button" onclick="window.location.href='signup.html'">Sign Up</button>
+    
+  </div>
+</header>
+
+<section class="main-slider">
+  <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1000&q=80" alt="Recycle Image" />
+</section>
+
+<section class="icon-grid">
+  <div>
+    <div class="icon-circle"><img src="https://img.icons8.com/ios-filled/50/ffffff/battery--v1.png" alt="Car Battery" /></div>
+    <div class="icon-label">Car Battery</div>
+  </div>
+  <div>
+    <div class="icon-circle"><img src="https://img.icons8.com/ios-filled/50/ffffff/wine-glass.png" alt="Glass" /></div>
+    <div class="icon-label">Glass</div>
+  </div>
+  <div>
+    <div class="icon-circle"><img src="https://img.icons8.com/ios-filled/50/ffffff/ink-cartridge.png" alt="Ink Cartridge" /></div>
+    <div class="icon-label">Ink Cartridge</div>
+  </div>
+  <div>
+    <div class="icon-circle"><img src="https://img.icons8.com/ios-filled/50/ffffff/cooking-oil.png" alt="Cooking Oil" /></div>
+    <div class="icon-label">Cooking Oil</div>
+  </div>
+  <div>
+    <div class="icon-circle"><img src="https://img.icons8.com/ios-filled/50/ffffff/plastic-bottle.png" alt="Plastic" /></div>
+    <div class="icon-label">Plastic</div>
+  </div>
+  <div>
+    <div class="icon-circle"><img src="https://img.icons8.com/ios-filled/50/ffffff/document.png" alt="Paper" /></div>
+    <div class="icon-label">Paper</div>
+  </div>
+  <div>
+    <div class="icon-circle"><img src="https://img.icons8.com/ios-filled/50/ffffff/laptop.png" alt="Electronic" /></div>
+    <div class="icon-label">Electronic</div>
+  </div>
+  <div>
+    <div class="icon-circle"><img src="https://img.icons8.com/ios-filled/50/ffffff/news.png" alt="Newspaper" /></div>
+    <div class="icon-label">Newspaper</div>
+  </div>
+</section>
+
+<section class="news-section">
+  <div class="news-text">
+    <h2>What News?</h2>
+    <p>
+      KUALA LUMPUR, April 15 — When you see headlines warning that Malaysia will need to recycle 87,000 electric vehicles (EV) batteries by 2030, it’s easy to feel worried.
+      The number cited in recent New Straits Times articles suggests a looming waste crisis from EV adoption. But is that really the case?
+    </p>
+    <button>Contact us</button>
+  </div>
+  <div class="news-image">
+    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=600&q=80" alt="Recycle News" />
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RegenMarket - Create Account</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <img src="WhatsApp Image 2025-04-13 at 22.04.43_b172caee.jpg" alt="Logo" class="logo" />
+      <h2>Create an account</h2>
+      <form onsubmit="handleSignup(event)">
+        <input type="text" placeholder="Full name" required />
+        <input type="email" placeholder="example.email@gmail.com" required />
+        <input type="password" placeholder="Enter at least 8+ characters" required />
+        <button type="submit">Sign up</button>
+      </form>
+
+      <p>Already have an account? <a href="mainpage.html">Log in</a></p>
+
+      <p>Or sign in with</p>
+      <div class="social-icons">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google" />
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+        <img src="https://cdn-icons-png.flaticon.com/512/831/831276.png" alt="Apple" />
+      </div>
+    </div>
+
+    <div class="side-banner">
+      <div class="recycle-icon">♻️</div>
+      <!-- Add background pattern image if needed -->
+    </div>
+  </div>
+
+  <script>
+    function handleSignup(event) {
+      event.preventDefault(); // Prevents form from refreshing the page
+      alert("Sign up successful! Redirecting to login page...");
+      window.location.href = "login.html"; // Redirects to login
+    }
+  </script>
+</body>
+</html>
